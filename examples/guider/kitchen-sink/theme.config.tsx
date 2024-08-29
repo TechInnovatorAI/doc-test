@@ -48,7 +48,10 @@ export default defineTheme([
           }),
 
           group('Get Started', [
-            link('What is Polymarket?', '/docs/guides/'),
+            link(
+              'What is Polymarket?',
+              '/docs/guides/get-started/what-is-polymarket',
+            ),
             link('How to Sign-Up', '/docs/guides/get-started/how-to-signup'),
             link('How to Deposit', '/docs/guides/get-started/how-to-deposit'),
             link(
