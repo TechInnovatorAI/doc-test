@@ -4,7 +4,6 @@ import {
   directory,
   group,
   link,
-  separator,
   site,
   type SiteComponent,
 } from '@neato/guider/theme';
@@ -37,12 +36,15 @@ export default defineTheme([
         sidebar: [
           link('Developer Docs', 'https://polymarket.com/developer', {
             style: 'star',
-            icon: 'fa6-solid:house',
+            icon: 'fa6-solid:envelope',
           }),
-          link('Discord', 'https://discord.gg/polymarket', { style: 'star' }),
-          link('Twittter', 'https://x.com/polymarket', {
+          link('Discord', 'https://discord.gg/polymarket', {
             style: 'star',
-            icon: 'radix-icons:github-logo',
+            icon: 'radix-icons:discord-logo',
+          }),
+          link('Twitter', 'https://x.com/polymarket', {
+            style: 'star',
+            icon: 'radix-icons:twitter-logo',
           }),
 
           group('Get Started', [
