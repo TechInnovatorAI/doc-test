@@ -1,0 +1,35 @@
+---
+title: 'How are prices calculated?'
+description: 'The prices probabilities displayed on Polymarket are the midpoint of the bid-ask spread in the orderbook.'
+---
+
+# How are prices calculated?
+
+**The prices probabilities displayed on Polymarket are the midpoint of the bid-ask spread in the orderbook.**
+
+Prices = probabilities.
+
+The probabilities displayed on Polymarket are the midpoint of the bid-ask spread in the orderbook.
+
+{/* For Light Mode */}
+<img
+  className="block w-full h-auto dark:hidden"
+  style={{ maxWidth: '100%', height: 'auto' }}
+  noZoom
+  src="https://polymarket-upload.s3.us-east-2.amazonaws.com/how_are_prices_calculated.png"
+/>
+
+{/* For Dark Mode */}
+<img
+  className="hidden w-full h-auto dark:block"
+  style={{ maxWidth: '100%', height: 'auto' }}
+  noZoom
+  src="https://polymarket-upload.s3.us-east-2.amazonaws.com/how_are_prices_calculated.png"
+/>
+
+ For example, in this market, the probability of 37% is the midpoint between the 34¢ bid and 40¢ ask. If the bid-ask spread is wider than 10¢, the probability is shown as the last traded price.
+
+
+
+You may not be able to buy shares at the displayed probability / price because there is a bid-ask spread. In the above example, a trader wanting to buy shares would pay 40¢ for up to 4,200 shares, after which the price would rise to 43¢.
+

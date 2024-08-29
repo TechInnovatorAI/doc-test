@@ -1,0 +1,47 @@
+---
+title: 'How are Markets Resolved'
+description: 'Markets are resolved by the UMA Optimistic Oracle, a smart-contract based optimistic oracle.'
+---
+
+# How are Markets Resolved
+
+**Markets are resolved by the UMA Optimistic Oracle, a smart-contract based optimistic oracle.**
+
+When the result of a market becomes clear, the market can be “resolved,” or permanently finalized. When a market is resolved, holders of winning shares receive $1 per share, losing shares become worthless, and trading of shares is no longer possible.
+
+To resolve, a market must be “proposed,” which involves putting up a bond in USDC.e which will be forfeited if the proposal is unsuccessful. If your proposal is validated as accurate, you will receive a reward for your proposal.
+
+
+<Note>
+ If you propose a market too early, or are unsuccessful in your proposal, you will lose all of your $750 bond. Do not propose a resolution unless you understand the process and are confident in your view.
+</Note>
+
+### To propose a market resolution:
+
+Navigate to the market you want to propose and click Resolution > Propose Resolution.
+
+You will be taken to the corresponding Uma oracle page for the market, which shows the bond required and reward for successful proposal.
+
+Ensure that you have enough USDC.e in your wallet on Polygon to supply the bond
+Select the option you would like to propose from the drop-down menu labeled Request(price).
+
+Connect your wallet and submit the transaction.
+
+It will now enter the Uma Oracle’s verification queue.
+
+Once in the verification process, Uma will review the transaction to ensure it was proposed correctly. If approved, you will receive your bond amount back in your wallet plus the reward. If not approved, it will enter Uma’s dispute resolution process, which is described in detail here.
+
+### Can I Create My Own Market?
+
+Users cannot create their own markets, but are encouraged to suggest ideas for new markets. The best ways to suggest a new market are:
+
+- On [Twitter / X](https://x.com/polymarket) by tagging @polymarket
+- On [Discord](https://discord.com/invite/polymarket) in the #market-suggestion channel
+
+To give your market suggestion the best chance of being listed, include as much information as possible, such as:
+
+- Name of the market
+- Evidence of demand for trading the market
+- Does the market have any social or news value?
+- What is the exact question the market will answer?
+- What is the proposed source of resolution for the market?

@@ -15,13 +15,9 @@ const siteTemplate = site('docs', {
     link('API reference', '/api-ref'),
   ],
   navigation: [
-    link('Documentation', '/docs/guides', { icon: 'fa6-solid:house' }),
-    link('API reference', '/api-ref'),
-    link('Documentation', '/docs/guides', { icon: 'fa6-solid:house' }),
-    link('API reference', '/api-ref'),
-    separator(),
+    link('Email Support', '/docs/guides', { icon: 'fa6-solid:house' }),
+    link('Polymarket', 'https://polymarket.com/'),
   ],
-  github: 'movie-web/movie-web',
 });
 
 export default defineTheme([
@@ -34,37 +30,113 @@ export default defineTheme([
       editRepositoryBase: 'https://github.com/mrjvs/neatojs',
     },
     pageFooter: {
-      text: 'Made with love <3',
+      text: 'Made with love <6',
     },
     directories: [
       directory('guides', {
         sidebar: [
-          link('Guides', '/docs/guides/', {
+          link('Developer Docs', 'https://polymarket.com/developer', {
             style: 'star',
             icon: 'fa6-solid:house',
           }),
-          link('How to?', '/docs/guides/how-to', { style: 'star' }),
-          link('GFM', '/docs/guides/github', {
+          link('Discord', 'https://discord.gg/polymarket', { style: 'star' }),
+          link('Twittter', 'https://x.com/polymarket', {
             style: 'star',
             icon: 'radix-icons:github-logo',
           }),
 
-          group('Introduction', [
-            link('Guides', '/docs/guides/'),
-            link('How to?', '/docs/guides/how-to'),
+          group('Get Started', [
+            link('What is Polymarket?', '/docs/guides/'),
+            link('How to Sign-Up', '/docs/guides/get-started/how-to-signup'),
+            link('How to Deposit', '/docs/guides/get-started/how-to-deposit'),
+            link(
+              'Making your First Trade',
+              '/docs/guides/get-started/making-your-first-trade',
+            ),
+            link(
+              'What is a Prediction Market?',
+              '/docs/guides/get-started/what-are-prediction-markets',
+            ),
           ]),
-          group('Other stuff', [
-            link('Guides', '/docs/guides/'),
-            link('How to?', '/docs/guides/how-to'),
+
+          group('Deposits', [
+            link('Deposit with Coinbase', '/docs/guides/deposits/coinbase'),
+            link(
+              'Deposit Using Your Card or PayPal',
+              '/docs/guides/deposits/moonpay',
+            ),
+            link('Deposit with Robinhood', '/docs/guides/deposits/robinhood'),
+            link(
+              'Deposit USDC on Ethereum',
+              '/docs/guides/deposits/usdc-on-eth',
+            ),
+            link(
+              'Large Cross Chain Deposits',
+              '/docs/guides/deposits/large-cross-chain-deposits',
+            ),
+            link('How to Withdraw', '/docs/guides/deposits/how-to-withdraw'),
           ]),
-          separator(),
-          link.nested('Troubleshooting', '/docs/guides/troubleshooting', [
-            link('Guides', '/docs/guides/'),
-            link('How to?', '/docs/guides/how-to'),
+
+          group('Markets', [
+            link(
+              'Can I create my own market?',
+              '/docs/guides/markets/can-anyone-make-a-market',
+            ),
+            link(
+              'How are markets created?',
+              '/docs/guides/markets/how-are-markets-created',
+            ),
+            link(
+              'How are Markets Resolved',
+              '/docs/guides/markets/how-are-markets-resolved',
+            ),
+            link('How Are Markets Disputed?', '/docs/guides/markets/dispute'),
+            link(
+              'How are markets clarified?',
+              '/docs/guides/markets/how-are-markets-clarified',
+            ),
           ]),
-          link.nested('Troubleshooting 2', [
-            link('Guides', '/docs/guides/'),
-            link('How to?', '/docs/guides/how-to'),
+
+          group('Trading', [
+            link(
+              'Using the orderbook',
+              '/docs/guides/trading/using-the-orderbook',
+            ),
+            link('Limit orders', '/docs/guides/trading/limit-orders'),
+            link(
+              'Does Polymarket Have Trading Limits?',
+              '/docs/guides/trading/no-limits',
+            ),
+            link('Can I sell early', '/docs/guides/trading/exiting-positions'),
+            link(
+              'How are prices calculated?',
+              '/docs/guides/trading/how-are-prices-calculated',
+            ),
+            link('Trading Fees', '/docs/guides/trading/fees'),
+          ]),
+
+          group('FAQ', [
+            link('Is my money safe', '/docs/guides/FAQ/is-my-money-safe'),
+            link(
+              'How to Export Your Private Key',
+              '/docs/guides/FAQ/how-to-export-private-key',
+            ),
+            link(
+              'Why do i need crypto',
+              '/docs/guides/FAQ/why-do-i-need-crypto',
+            ),
+            link(
+              'Does polymarket have an API',
+              '/docs/guides/FAQ/does-polymarket-have-an-api',
+            ),
+            link('sell early', '/docs/guides/FAQ/sell-early'),
+            link('Embeds', '/docs/guides/FAQ/embeds'),
+            link('When token', '/docs/guides/FAQ/wen-token'),
+            link('Support', '/docs/guides/FAQ/support'),
+            link(
+              'Is Polymarket the house',
+              '/docs/guides/FAQ/is-polymarket-the-house',
+            ),
           ]),
         ],
         settings: {
