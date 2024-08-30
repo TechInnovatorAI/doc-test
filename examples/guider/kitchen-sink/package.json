@@ -20,7 +20,8 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/react": "18.2.56"
+    "@types/react": "18.2.56",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "@neato/guider": "workspace:*",

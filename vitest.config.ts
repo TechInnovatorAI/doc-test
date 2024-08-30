@@ -4,7 +4,4 @@ export default defineConfig({
   test: {
     globals: true,
   },
-  server: {
-    open: true // This will open the browser automatically
-  }
 });
