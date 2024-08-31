@@ -11,12 +11,11 @@ import {
 const siteTemplate = site('docs', {
   dropdown: [
     link('Documentation', '/docs/guides', { icon: 'fa6-solid:house' }),
-    link('API reference', '/api-ref'),
   ],
-  navigation: [
-    link('Email Support', '/docs/guides', { icon: 'fa6-solid:house' }),
-    link('Polymarket', 'https://polymarket.com/'),
-  ],
+  // navigation: [
+  //   link('Email Support', '/docs/guides', { icon: 'fa6-solid:house' }),
+  //   link('Polymarket', 'https://polymarket.com/'),
+  // ],
 });
 
 export default defineTheme([
