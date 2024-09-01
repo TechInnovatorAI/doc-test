@@ -52,7 +52,10 @@
     "extends": [
       "@repo/eslint-config"
     ],
-    "ignorePatterns": ["dist/**/*", "style.css"],
+    "ignorePatterns": [
+      "dist/**/*",
+      "style.css"
+    ],
     "rules": {
       "import/no-named-as-default": "off",
       "import/no-named-as-default-member": "off"
@@ -112,6 +115,7 @@
     "git-url-parse": "^14.0.0",
     "glob": "^10.3.10",
     "gray-matter": "^4.0.3",
+    "lucide-react": "^0.437.0",
     "mdast-util-phrasing": "^4.1.0",
     "next-seo": "^6.5.0",
     "react-helmet-async": "^2.0.4",

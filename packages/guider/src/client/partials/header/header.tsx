@@ -63,6 +63,11 @@ export function HeaderInternal() {
               />
             ) : null}
           </div>
+          {/* <div className="gd-flex gd-items-center">
+            <span className="gd-inline-flex gd-items-center gd-justify-center gd-p-2 gd-bg-indigo-500 gd-rounded-md gd-shadow-lg">
+              <svg className="gd-h-6 gd-w-6 gd-text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"></svg>
+            </span>
+          </div> */}
           <div className="gd-flex md:gd-hidden gd-items-center">
             {site.navigation.length > 0 || site.github ? (
               <TopMobileNav
