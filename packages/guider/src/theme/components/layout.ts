@@ -25,6 +25,8 @@ const baseLayoutConfig: PopulatedLayoutSettings = {
     textLighter: '#9AB3BD',
     textHighlight: '#FFFFFF',
     background: '#050F13',
+    backgroundLight: '#f5f9fa',
+    backgroundDark: '#050F13',
     backgroundLighter: '#07171C',
     backgroundLightest: '#081E24',
     backgroundDarker: '#040C0F',

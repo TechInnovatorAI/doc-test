@@ -53,6 +53,8 @@ export type PopulatedLayoutSettings = {
     primaryLighter: string;
     primaryDarker: string;
     background: string;
+    backgroundLight: string;
+    backgroundDark: string;
     backgroundLighter: string;
     backgroundLightest: string;
     text: string;

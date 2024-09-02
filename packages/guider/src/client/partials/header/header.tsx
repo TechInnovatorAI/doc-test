@@ -10,10 +10,16 @@ import { HeaderDropdown } from './dropdown';
 import { SidebarMobileNav } from './sidebar-mobile-nav';
 import { TopMobileNav } from './top-mobile-nav';
 import { HeaderSearch } from './search';
+import { Sun } from 'lucide-react';
+import { Moon } from 'lucide-react';
+
 
 export function HeaderInternal() {
   const ctx = useContext(GuiderLayoutContext);
+  const [isDark, setIsDark] = useState(false);
   const { site, settings } = useGuider(ctx?.meta);
+
+  console.log(settings.colors.background);
 
   const [isScrolledFromTop, setIsScrolledFromTop] = useState(false);
 
@@ -43,7 +49,7 @@ export function HeaderInternal() {
         )}
       >
         <div className="gd-fixed neato-guider-overlay gd-transition-opacity gd-duration-150 gd-opacity-0 gd-inset-0 gd-bg-gradient-to-b gd-from-black/80 gd-to-transparent gd-z-[60] gd-pointer-events-none" />
-        <div className="gd-flex gd-justify-between gd-mb-6">
+        <div className="gd-flex gd-justify-between gd-mb-6 gd-items-center">
           <div className="gd-flex gd-items-center">
             <GuiderLogo />
             {site.dropdown.length > 0 ? (
@@ -63,11 +69,10 @@ export function HeaderInternal() {
               />
             ) : null}
           </div>
-          {/* <div className="gd-flex gd-items-center">
-            <span className="gd-inline-flex gd-items-center gd-justify-center gd-p-2 gd-bg-indigo-500 gd-rounded-md gd-shadow-lg">
-              <svg className="gd-h-6 gd-w-6 gd-text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"></svg>
-            </span>
-          </div> */}
+          {isDark ?
+            <Moon onClick={() => setIsDark(false)} /> :
+            <Sun onClick={() => setIsDark(true)} />
+          }
           <div className="gd-flex md:gd-hidden gd-items-center">
             {site.navigation.length > 0 || site.github ? (
               <TopMobileNav
