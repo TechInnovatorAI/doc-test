@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import classNames from 'classnames';
+import { Sun, Moon } from 'lucide-react';
 import { GuiderLayoutContext } from '../../page/context';
 import { useGuider } from '../../hooks/use-guider';
 import { GithubDisplay } from '../../components/github';
@@ -10,9 +11,6 @@ import { HeaderDropdown } from './dropdown';
 import { SidebarMobileNav } from './sidebar-mobile-nav';
 import { TopMobileNav } from './top-mobile-nav';
 import { HeaderSearch } from './search';
-import { Sun } from 'lucide-react';
-import { Moon } from 'lucide-react';
-
 
 export function HeaderInternal() {
   const ctx = useContext(GuiderLayoutContext);
@@ -69,10 +67,10 @@ export function HeaderInternal() {
               />
             ) : null}
           </div>
-          {isDark ?
+          {/* {isDark ?
             <Moon onClick={() => setIsDark(false)} /> :
             <Sun onClick={() => setIsDark(true)} />
-          }
+          } */}
           <div className="gd-flex md:gd-hidden gd-items-center">
             {site.navigation.length > 0 || site.github ? (
               <TopMobileNav
