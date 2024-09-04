@@ -2,9 +2,9 @@ html {
   scrollbar-gutter: stable;
 }
 
-body {
-	@apply gd-bg-bg gd-text-text gd-relative;
-}
+/* body {
+  @apply gd-bg-bg gd-text-text gd-relative;
+} */
 
 #__next {
   @apply gd-min-h-screen;
@@ -40,4 +40,138 @@ body[data-mobile-stop-overflow="true"] {
 ::-webkit-scrollbar {
   /* For some reason the styles don't get applied without the width */
   width: 13px;
+}
+
+
+p.gd-font-bold.gd-mb-2.gd-text-primary.gd-text-sm {
+  font-size: 14px;
+  color: #2E5CFF;
+  font-weight: 500;
+}
+
+a.gd-flex.gd-items-center.gd-w-full.gd-py-1\.5.gd-text-sm.gd-px-4.gd-rounded-lg.hover\:gd-text-textLight.hover\:gd-bg-bgLight {
+  color: #99A1B1;
+
+}
+
+a.neato-guider-active-link.gd-flex.gd-items-center.gd-w-full.gd-py-1\.5.gd-text-sm.gd-px-4.gd-rounded-lg.gd-bg-bgLightest.gd-text-primary {
+  background-color: var(--menu-bg-color);
+  color: #2E5CFF;
+  font-weight: 500 !important;
+}
+
+a.hover\:gd-text-textLight.gd-transition-colors.gd-duration-100.gd-text-primary {
+  color: #2E5CFF;
+}
+
+span.gd-size-7.gd-flex.gd-text-sm.gd-border-t-2.gd-justify-center.gd-items-center.gd-rounded-md.gd-transition-\[background-color\,color\,border-color\].gd-duration-100.group-hover\:gd-bg-bgLightest.group-hover\:gd-text-textHeading.gd-border-bgLightest.gd-bg-bgLight {
+  background-color: transparent !important;
+  border: 0.5px solid var(--box-border-color);
+}
+
+span.gd-size-7.gd-flex.gd-text-sm.gd-border-t-2.gd-justify-center.gd-items-center.gd-rounded-md.gd-transition-\[background-color\,color\,border-color\].gd-duration-100.group-hover\:gd-bg-bgLightest.group-hover\:gd-text-textHeading.gd-border-bgLightest.gd-bg-bgLight .iconify-icon {
+  color: #8E99B2 !important
+}
+
+a.hover\:gd-text-textLight.gd-transition-colors.gd-duration-100 {
+  color: #99A1B1;
+}
+
+.sub-description,
+.sub-description strong {
+  font-size: 18px;
+  color: var(--text-color) !important;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+a.pl-4.group.flex.items-center.lg\:text-sm.lg\:leading-6.mb-5.sm\:mb-4.font-medium.text-gray-600.hover\:text-gray-900.dark\:text-gray-400.dark\:hover\:text-gray-300{
+  color: var(--text-color) !important;
+
+}
+
+article h3 {
+  font-weight: 500 !important;
+}
+
+/* body {
+  background-color: #0A0B10 !important;
+} */
+
+button.header-search-btn {
+  width: 450px;
+  text-align: left;
+  border: 1px solid var(--box-border-color);
+  border-radius: 9px;
+  padding: 5px 15px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  background-color: var(--background-color) !important;
+}
+
+button.header-search-btn svg{
+  color: white;
+}
+
+button.header-search-btn .gd-opacity-50{
+  opacity: 1 !important;
+}
+
+/* header .gd-flex.gd-justify-between.gd-mb-6.gd-items-center .gd-flex.gd-items-center{
+  width: 100%;
+} */
+.site-logo{
+  width: 130px;
+}
+header .gd-flex.gd-justify-between.gd-mb-6.gd-items-center .gd-flex.gd-items-center div:nth-child(1){
+  width: 20%;
+  background-color: var(--background-color) !important;
+}
+
+header .gd-flex.gd-justify-between.gd-mb-6.gd-items-center .gd-flex.gd-items-center div:nth-child(4){
+  width: 30%;
+}
+
+.gd-w-px.gd-h-6.gd-bg-line.gd-rotate-12.gd-mx-4{
+  opacity: 0;
+}
+
+.gd-border-line{
+  border-color: var(--box-border-color) !important;
+}
+
+span.gd-flex-1.gd-transition-colors.gd-duration-100,
+header .gd-flex.gd-justify-between.gd-mb-6.gd-items-center .gd-flex.gd-items-center div:nth-child(1) span,
+header span.gd-text-right.gd-text-xs.gd-hidden.md\:gd-inline-block,
+header span.gd-flex-1.gd-hidden.md\:gd-inline-block{
+  color: #99A1B1;
+}
+
+
+/* Light theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #374256;
+  --heading-text-color: #121A2E;
+  --menu-bg-color: #EAEEFF;
+  --box-border-color: #DFE3EC;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --background-color: #0A0B10;
+  --text-color: #99A1B1;
+  --heading-text-color: #DFE3EC;
+  --menu-bg-color: #0E1328;
+  --box-border-color: #22252a;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background-color) ;
+  color: var(--text-color);
+}
+
+.gd-text-textHeading{
+  color: var(--heading-text-color) !important;
+
 }
