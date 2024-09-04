@@ -29,7 +29,7 @@ export function SearchModal(props: {
         leaveFrom="gd-opacity-100 gd-scale-100"
         leaveTo="gd-opacity-0 gd-scale-95"
       >
-        <div className="gd-max-w-[800px] gd-relative gd-mx-auto gd-mt-[25vh]">
+        <div className="gd-max-w-[800px] gd-relative gd-mx-auto gd-mt-[10vh]">
           <SearchScreen searchKey={props.searchKey} onClose={props.onClose} />
         </div>
       </Transition.Child>
