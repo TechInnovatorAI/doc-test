@@ -9,7 +9,7 @@ export type MarkdownParagraphProps = {
 
 export function MarkdownParagraph(props: MarkdownParagraphProps) {
   return (
-    <p className="gd-mb-3 gd-leading-relaxed" {...props.attrs}>
+    <p className="gd-mb-3 gd-leading-relaxed sub-description" {...props.attrs}>
       {props.children}
     </p>
   );

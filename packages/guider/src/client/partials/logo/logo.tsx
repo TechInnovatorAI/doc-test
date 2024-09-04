@@ -11,7 +11,8 @@ export function LogoInternal() {
 
   const content = (
     <span className="gd-text-base gd-font-bold gd-text-textHeading">
-      <img src={logoSrc} alt={site.logo.name ?? 'Guider'} style={{ height: 'auto', maxHeight: '50px' }} />
+      <img className='dark:gd-block gd-hidden site-logo' src={logoSrc} alt={site.logo.name ?? 'Guider'} />
+      <img className='dark:gd-hidden gd-block site-logo' src={"https://mintlify.s3-us-west-1.amazonaws.com/polymarket/logo/light.svg"} alt={site.logo.name ?? 'Guider'} />
     </span>
   );
   // const content = (

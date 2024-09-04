@@ -6,7 +6,7 @@ export function MarkdownStrong(props: MarkdownProps) {
     <strong
       {...props.attrs}
       className={classNames(
-        'gd-font-semibold gd-text-textHeading gd-text-opacity-85',
+        'gd-font-semibold gd-text-textHeading gd-text-opacity-85 dark:text-black',
         props.attrs.class,
       )}
     >

@@ -55,7 +55,7 @@ export function ThemeProvider() {
   }, [serializedSettings, overwrittenColors]);
   return (
     <Helmet helmetData={helmetData}>
-      <body
+      <body className='dark:gd-bg-red-300'
         style={
           Object.entries(style)
             .map((v) => v.join(': '))

@@ -17,7 +17,10 @@ export function HeaderInternal() {
   const [isDark, setIsDark] = useState(false);
   const { site, settings } = useGuider(ctx?.meta);
 
-  console.log(settings.colors.background);
+  useEffect(() => {
+    // Apply theme based on state
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  }, [isDark]);
 
   const [isScrolledFromTop, setIsScrolledFromTop] = useState(false);
 
@@ -35,42 +38,32 @@ export function HeaderInternal() {
   return (
     <div
       className={classNames(
-        'gd-sticky gd-z-50 gd-top-0 gd-bg-bg gd-transition-colors gd-duration-300 gd-mb-8',
+        'gd-sticky gd-z-50 gd-top-0 gd-transition-colors gd-duration-300 gd-mb-8',
         isScrolledFromTop ? 'gd-bg-opacity-100' : 'gd-bg-opacity-0',
+        { 'gd-dark': isDark, 'gd-light': !isDark }
       )}
     >
       <header
         className={classNames(
           'gd-max-w-[1480px] gd-mx-auto',
           'gd-p-6 gd-pb-0 gd-border-b gd-border-line',
-          isScrolledFromTop ? 'gd-bg-opacity-100' : 'gd-bg-opacity-0',
+          isScrolledFromTop ? 'gd-bg-opacity-100' : 'gd-bg-opacity-0'
         )}
       >
         <div className="gd-fixed neato-guider-overlay gd-transition-opacity gd-duration-150 gd-opacity-0 gd-inset-0 gd-bg-gradient-to-b gd-from-black/80 gd-to-transparent gd-z-[60] gd-pointer-events-none" />
         <div className="gd-flex gd-justify-between gd-mb-6 gd-items-center">
-          <div className="gd-flex gd-items-center">
+          <div>
             <GuiderLogo />
-            {site.dropdown.length > 0 ? (
-              <>
-                <div className="gd-w-px gd-h-6 gd-bg-line gd-rotate-12 gd-mx-4" />
-                <HeaderDropdown dropdown={site.dropdown} />
-              </>
-            ) : null}
-            <HeaderSearch />
           </div>
-          <div className="gd-hidden md:gd-flex gd-items-center gd-space-x-3">
-            <HeaderNav items={site.navigation} />
-            {site.github ? (
-              <GithubDisplay
-                org={site.github.split('/')[0]}
-                repo={site.github.split('/', 2)[1]}
-              />
-            ) : null}
+          <HeaderSearch />
+          <div className='gd-flex gd-items-center gd-space-x-6'>
+           <h4 className='gd-text-sm'>Email Support</h4>
+              <button className='gd-text-sm dark:gd-bg-transparent dark:gd-border dark:gd-border-[#2E5CFF] dark:gd-bg-[#0E1226] dark:gd-text-[#2E5CFF] gd-bg-[#2E5CFF] gd-text-white gd-py-1 gd-px-4 gd-rounded-full'>Polymarket</button>
+            {isDark ?
+              <Moon onClick={() => setIsDark(false)} /> :
+              <Sun onClick={() => setIsDark(true)} />
+            }
           </div>
-          {/* {isDark ?
-            <Moon onClick={() => setIsDark(false)} /> :
-            <Sun onClick={() => setIsDark(true)} />
-          } */}
           <div className="gd-flex md:gd-hidden gd-items-center">
             {site.navigation.length > 0 || site.github ? (
               <TopMobileNav
