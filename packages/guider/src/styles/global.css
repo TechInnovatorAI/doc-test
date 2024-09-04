@@ -173,6 +173,10 @@ header{
   color: white !important;
 }
 
+.input-model{
+  opacity: 0.7 !important;
+}
+
 
 /* Light theme */
 :root {

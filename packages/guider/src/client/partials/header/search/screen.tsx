@@ -114,10 +114,10 @@ export function SearchScreen(props: {
 
   return (
     <Combobox value={null} onChange={onChange}>
-      <div className="dark:gd-bg-[#0A0B10] gd-bg-white gd-border gd-border-bgLightest gd-rounded-2xl gd-p-2 ">
+      <div className="dark:gd-bg-[#0A0B10] gd-bg-white gd-border gd-border-gray-200 dark:gd-border-white/10 gd-rounded-2xl gd-p-2 ">
         <div className="gd-w-full gd-h-14 gd-relative">
           <Combobox.Input
-            className="gd-border gd-rounded-xl gd-border-black gd-w-full gd-pl-16 gd-h-full gd-text-textHeading gd-bg-transparent focus:gd-outline-none dark:placeholder:gd-text-[#99A1B1] dark:focus:gd-border-gray-300 dark:gd-border dark:gd-border-white/10 placeholder:gd-text-opacity-75"
+            className="gd-border gd-rounded-xl gd-border-gray-200 gd-w-full gd-pl-16 gd-h-full gd-text-textHeading gd-bg-transparent focus:gd-outline-none dark:placeholder:gd-text-[#99A1B1] dark:focus:gd-border-gray-300 dark:gd-border dark:gd-border-white/10 placeholder:gd-text-opacity-75"
             placeholder="Search for anything you wish to know..."
             value={query}
             onChange={(e) => {
