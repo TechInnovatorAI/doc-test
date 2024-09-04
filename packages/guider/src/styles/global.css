@@ -60,6 +60,10 @@ a.neato-guider-active-link.gd-flex.gd-items-center.gd-w-full.gd-py-1\.5.gd-text-
   font-weight: 500 !important;
 }
 
+a.gd-flex.gd-items-center.gd-w-full.gd-py-1\.5.gd-text-sm.gd-px-4.gd-rounded-lg.hover\:gd-text-textLight.hover\:gd-bg-bgLight:hover{
+  background-color: var(--menu-bg-color) !important;
+}
+
 a.hover\:gd-text-textLight.gd-transition-colors.gd-duration-100.gd-text-primary {
   color: #2E5CFF;
 }
@@ -146,13 +150,36 @@ header span.gd-flex-1.gd-hidden.md\:gd-inline-block{
   color: #99A1B1;
 }
 
+.icons-left-sidebar{
+  border: 1px solid var(--box-border-color) !important;
+}
+
+header{
+  background-color: var(--background-color) !important;
+}
+
+.gd-text-textHeading{
+  color: var(--heading-text-color) !important;
+
+}
+
+.icons-left-sidebar:hover {
+  background: linear-gradient(45deg, rgb(45, 156, 219), rgb(187, 107, 217));
+  color: white;
+}
+
+.top-left-icon:hover .icons-left-sidebar {
+  background: linear-gradient(45deg, rgb(45, 156, 219), rgb(187, 107, 217)) !important;
+  color: white !important;
+}
+
 
 /* Light theme */
 :root {
   --background-color: #ffffff;
   --text-color: #374256;
   --heading-text-color: #121A2E;
-  --menu-bg-color: #EAEEFF;
+  --menu-bg-color: #F6F6F7;
   --box-border-color: #DFE3EC;
 }
 
@@ -171,7 +198,3 @@ body {
   color: var(--text-color);
 }
 
-.gd-text-textHeading{
-  color: var(--heading-text-color) !important;
-
-}
