@@ -9,3 +9,6 @@ out
 /test.js
 /test.ts
 .turbo
+
+# Local Netlify folder
+.netlify

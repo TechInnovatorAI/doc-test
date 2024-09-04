@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build --workspace=packages/your-nextjs-app"
+  publish = "packages/your-nextjs-app/.next"
+
+[functions]
+  directory = "packages/your-nextjs-app/netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
