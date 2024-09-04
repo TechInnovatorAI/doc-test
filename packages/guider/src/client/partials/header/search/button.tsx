@@ -5,7 +5,7 @@ export function SearchButton(props: { onClick?: () => void }) {
     <button
       type="button"
       onClick={props.onClick}
-      className="header-search-btn !gd-bg-bgDark gd-gap-2 gd-py-1.5 gd-px-2 gd-text-left md:gd-w-48 hover:!gd-bg-bgLight active:gd-scale-95 hover:gd-text-textHeading gd-transition-[color,transform] gd-border gd-border-bgLightest gd-rounded-md gd-flex gd-items-center"
+      className="header-search-btn !gd-bg-bgDark gd-gap-2 gd-py-1.5 gd-px-2 gd-text-left md:gd-w-48 active:gd-scale-95 hover:gd-text-textHeading gd-transition-[color,transform] gd-border gd-border-bgLightest gd-rounded-md gd-flex gd-items-center"
     >
       <Icon
         icon="mingcute:search-2-fill"
