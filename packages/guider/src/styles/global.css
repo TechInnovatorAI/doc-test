@@ -150,13 +150,36 @@ header span.gd-flex-1.gd-hidden.md\:gd-inline-block{
   color: #99A1B1;
 }
 
+.icons-left-sidebar{
+  border: 1px solid var(--box-border-color) !important;
+}
+
+header{
+  background-color: var(--background-color) !important;
+}
+
+.gd-text-textHeading{
+  color: var(--heading-text-color) !important;
+
+}
+
+.icons-left-sidebar:hover {
+  background: linear-gradient(45deg, rgb(45, 156, 219), rgb(187, 107, 217));
+  color: white;
+}
+
+.top-left-icon:hover .icons-left-sidebar {
+  background: linear-gradient(45deg, rgb(45, 156, 219), rgb(187, 107, 217)) !important;
+  color: white !important;
+}
+
 
 /* Light theme */
 :root {
   --background-color: #ffffff;
   --text-color: #374256;
   --heading-text-color: #121A2E;
-  --menu-bg-color: #EAEEFF;
+  --menu-bg-color: #F6F6F7;
   --box-border-color: #DFE3EC;
 }
 
@@ -175,7 +198,3 @@ body {
   color: var(--text-color);
 }
 
-.gd-text-textHeading{
-  color: var(--heading-text-color) !important;
-
-}
