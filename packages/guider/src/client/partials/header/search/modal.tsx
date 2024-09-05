@@ -17,9 +17,9 @@ export function SearchModal(props: {
         leaveFrom="gd-opacity-100"
         leaveTo="gd-opacity-0"
       >
-        <div className="gd-inset-0 gd-fixed gd-bg-opacity-75 gd-bg-black" />
+        <div className="gd-inset-0 gd-fixed input-model dark:gd-bg-black gd-bg-white" />
       </Transition.Child>
-      <div className="gd-inset-0 gd-absolute" onClick={props.onClose} />
+      <div className="gd-inset-0 gd-absolute gd-backdrop-blur-sm" onClick={props.onClose} />
       <Transition.Child
         as={Fragment}
         enter="gd-transition-[transform,opacity] gd-duration-300"
@@ -29,7 +29,7 @@ export function SearchModal(props: {
         leaveFrom="gd-opacity-100 gd-scale-100"
         leaveTo="gd-opacity-0 gd-scale-95"
       >
-        <div className="gd-max-w-[800px] gd-relative gd-mx-auto gd-mt-[25vh]">
+        <div className="gd-max-w-[800px] gd-relative gd-mx-auto gd-mt-[10vh]">
           <SearchScreen searchKey={props.searchKey} onClose={props.onClose} />
         </div>
       </Transition.Child>

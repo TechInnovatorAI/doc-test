@@ -56,46 +56,13 @@ export function HeaderInternal() {
             <GuiderLogo />
           </div>
           <HeaderSearch />
-          <div className="gd-flex gd-items-center gd-space-x-6">
-            <h4 className="gd-text-sm gd-text-gray-600 gd-font-normal hover:gd-text-gray-900 gd-cursor-pointer">
-              Email Support
-            </h4>
-            <a
-              href="https://polymarket.com"
-              target={'_blank'}
-              className="hover:gd-bg-[#426CFF] gd-flex gd-gap-2 gd-items-center gd-text-sm dark:gd-bg-transparent dark:gd-border dark:gd-border-[#2E5CFF] dark:gd-bg-[#0E1226] dark:gd-text-[#2E5CFF] gd-bg-[#2E5CFF] gd-text-white gd-py-1 gd-px-4 gd-rounded-full"
-            >
-              Polymarket{' '}
-              <svg
-                width="3"
-                height="24"
-                viewBox="0 -9 3 24"
-                className="h-5 rotate-0 overflow-visible text-white/90 dark:text-primary-light"
-              >
-                <path
-                  d="M0 0L3 3L0 6"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                ></path>
-              </svg>
-            </a>
-            {isDark ? (
-              <Moon
-                onClick={() => {
-                  setIsDark(false);
-                }}
-                className="gd-cursor-pointer gd-w-5 gd-opacity-50 hover:gd-opacity-100"
-              />
-            ) : (
-              <Sun
-                onClick={() => {
-                  setIsDark(true);
-                }}
-                className="gd-cursor-pointer gd-w-5 gd-opacity-50 hover:gd-opacity-100"
-              />
-            )}
+          <div className='gd-flex gd-items-center gd-space-x-6'>
+           <h4 className='gd-text-sm gd-text-gray-500 gd-font-normal hover:gd-text-gray-400 gd-cursor-pointer'>Email Support</h4>
+              <a href="https://polymarket.com" target={'_blank'} className='hover:gd-bg-[#426CFF] gd-flex gd-gap-2 gd-items-center gd-text-sm dark:gd-bg-transparent dark:gd-border dark:gd-border-[#2E5CFF] dark:gd-bg-[#0E1226] dark:gd-text-[#2E5CFF] gd-bg-[#2E5CFF] gd-text-white gd-py-1 gd-px-4 gd-rounded-full'>Polymarket <svg width="3" height="24" viewBox="0 -9 3 24" class="h-5 rotate-0 overflow-visible text-white/90 dark:text-primary-light"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            {isDark ?
+              <Moon onClick={() => setIsDark(false)} className='gd-cursor-pointer gd-w-5 gd-opacity-50 hover:gd-opacity-100'/> :
+              <Sun onClick={() => setIsDark(true)} className='gd-cursor-pointer gd-w-5 gd-opacity-50 hover:gd-opacity-100'/>
+            }
           </div>
           <div className="gd-flex md:gd-hidden gd-items-center">
             {site.navigation.length > 0 || site.github ? (

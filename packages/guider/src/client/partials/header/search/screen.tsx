@@ -15,7 +15,7 @@ const iconMap = {
 function SearchMessage(props: { title: string; text: string; icon: string }) {
   return (
     <div className="gd-py-12 gd-text-center gd-flex gd-flex-col gd-items-center gd-border-t gd-border-bgLightest">
-      <div className="gd-flex gd-flex-none gd-items-center gd-transition-colors gd-duration-100 gd-justify-center gd-h-6 gd-w-6 gd-rounded-md gd-bg-bgLightest group-hover:gd-bg-primaryLight gd-text-textLight group-hover:gd-text-primaryDark">
+      <div className="gd-flex gd-flex-none gd-items-center gd-transition-colors gd-duration-100 gd-justify-center gd-h-6 gd-w-6 gd-rounded-md gd-bg-bgLightest gd-text-textLight">
         <Icon icon={props.icon} />
       </div>
       <h2 className="gd-text-textHeading gd-text-sm gd-font-bold gd-mt-3 gd-mb-1">
@@ -31,7 +31,7 @@ function SearchResults(props: {
   onClose?: () => void;
 }) {
   return (
-    <div className="gd-p-2 gd-space-y-2 gd-border-t gd-border-bgLightest gd-max-h-[22rem] gd-overflow-y-auto">
+    <div className="gd-p-2 gd-space-y-2 gd-max-h-[22rem] gd-overflow-y-auto">
       {props.results.map((v) => {
         let title = v.pageTitle ? `${v.pageTitle} / ${v.title}` : v.title;
         if (v.pageTitle === v.title) title = v.title;
@@ -43,30 +43,30 @@ function SearchResults(props: {
                 key={v.id}
                 onClick={props.onClose}
                 className={classNames(
-                  'gd-p-3 hover:gd-bg-primaryDark gd-group gd-duration-100 gd-transition-colors gd-rounded-lg gd-flex gd-gap-4 gd-items-center gd-relative',
+                  'gd-p-3 gd-group gd-rounded-lg gd-flex gd-gap-4 gd-items-center gd-relative',
                   {
-                    '!gd-bg-primaryDark': active,
+                    '': active,
                   },
                 )}
               >
                 <div
                   className={classNames(
-                    'gd-flex gd-flex-none gd-items-center gd-transition-colors gd-duration-100 gd-justify-center gd-h-6 gd-w-6 gd-rounded-md gd-bg-bgLightest group-hover:gd-bg-primaryLight gd-text-textLight group-hover:gd-text-primaryDark',
+                    'gd-flex gd-flex-none gd-items-center gd-justify-center gd-h-6 gd-w-6 gd-rounded-md gd-bg-bgLightest gd-text-textLight',
                     {
-                      '!gd-bg-primaryLight !gd-text-primaryDark': active,
+                      '': active,
                     },
                   )}
                 >
                   <Icon icon={iconMap[v.type]} />
                 </div>
                 <div className="gd-pr-4">
-                  <h2 className="gd-text-white gd-line-clamp-1 gd-text-sm gd-font-bold">
+                  <h2 className="gd-text-text gd-line-clamp-1 gd-text-sm gd-font-bold">
                     {title}
                   </h2>
                   <p
                     className={classNames(
-                      'group-hover:gd-text-white gd-transition-colors gd-duration-100 gd-text-text gd-line-clamp-1 gd-text-sm',
-                      { '!gd-text-white': active },
+                      'gd-transition-colors gd-duration-100 gd-text-text gd-line-clamp-1 gd-text-sm',
+                      { '': active },
                     )}
                   >
                     {v.content}
@@ -76,9 +76,9 @@ function SearchResults(props: {
                   className={classNames({
                     'gd-inset-y-0 gd-absolute gd-right-1 gd-flex gd-translate-x-1 gd-items-center gd-opacity-0 gd-transition-[transform,opacity]':
                       true,
-                    'group-hover:gd-translate-x-0 group-hover:gd-opacity-100':
+                    '':
                       true,
-                    'gd-opacity-100 gd-translate-x-0': active,
+                    '': active,
                   })}
                 >
                   <Icon
@@ -114,10 +114,10 @@ export function SearchScreen(props: {
 
   return (
     <Combobox value={null} onChange={onChange}>
-      <div className="dark:gd-bg-bg gd-bg-white gd-border gd-border-bgLightest gd-rounded-2xl gd-p-2">
+      <div className="dark:gd-bg-[#0A0B10] gd-bg-white gd-border gd-border-gray-200 dark:gd-border-white/10 gd-rounded-2xl gd-p-2 ">
         <div className="gd-w-full gd-h-14 gd-relative">
           <Combobox.Input
-            className="gd-border gd-rounded-xl gd-border-black gd-w-full gd-pl-16 gd-h-full gd-text-textHeading gd-bg-transparent focus:gd-outline-none placeholder:gd-text-text placeholder:gd-text-opacity-75"
+            className="gd-border gd-rounded-xl gd-border-gray-200 gd-w-full gd-pl-16 gd-h-full gd-text-textHeading gd-bg-transparent focus:gd-outline-none dark:placeholder:gd-text-[#99A1B1] dark:focus:gd-border-gray-300 dark:gd-border dark:gd-border-white/10 placeholder:gd-text-opacity-75"
             placeholder="Search for anything you wish to know..."
             value={query}
             onChange={(e) => {
