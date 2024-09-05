@@ -14,7 +14,7 @@ const iconMap = {
 
 function SearchMessage(props: { title: string; text: string; icon: string }) {
   return (
-    <div className="gd-py-12 gd-text-center gd-flex gd-flex-col gd-items-center gd-border-t gd-border-bgLightest">
+    <div className="gd-py-12 gd-text-center gd-flex gd-flex-col gd-items-center">
       <div className="gd-flex gd-flex-none gd-items-center gd-transition-colors gd-duration-100 gd-justify-center gd-h-6 gd-w-6 gd-rounded-md gd-bg-bgLightest gd-text-textLight">
         <Icon icon={props.icon} />
       </div>
