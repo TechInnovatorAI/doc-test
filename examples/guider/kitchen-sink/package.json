@@ -11,7 +11,7 @@
   "prettier": "@repo/prettier-config",
   "scripts": {
     "start": "next start",
-    "build": "next build && next export",
+    "build": "next build",
     "dev": "next",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
