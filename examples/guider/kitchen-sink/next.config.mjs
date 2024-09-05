@@ -4,6 +4,4 @@ const withGuider = guider({
   themeConfig: './theme.config.tsx',
 });
 
-export default withGuider({
-  output: 'export',
-});
+export default withGuider({});

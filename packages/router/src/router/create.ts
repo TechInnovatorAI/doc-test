@@ -8,7 +8,7 @@ import type {
   RawRequestDefaultExpression,
   RawServerBase,
   RouteGenericInterface,
-  RouteHandlerMethod,
+  // RouteHandlerMethod,
 } from 'fastify';
 import type { ZodTypeProvider } from 'fastify-type-provider-zod';
 import type { NeatHandler } from './handler';
@@ -80,7 +80,7 @@ export interface Router<
 function makeHandler<
   RawServer extends RawServerBase,
   RawRequest extends RawRequestDefaultExpression<RawServer>,
-  RawReply extends RawReplyDefaultExpression<RawServer>,
+  // RawReply extends RawReplyDefaultExpression<RawServer>,
   RouteGeneric extends RouteGenericInterface,
   ContextConfig,
   SchemaCompiler extends FastifySchema,
@@ -96,17 +96,8 @@ function makeHandler<
     Logger,
     TypeProvider
   >,
-): RouteHandlerMethod<
-  RawServer,
-  RawRequest,
-  RawReply,
-  RouteGeneric,
-  ContextConfig,
-  SchemaCompiler,
-  TypeProvider,
-  Logger
-> {
-  return async (req, reply) => {
+): any {
+  return async (req: any, reply: any) => {
     const res = await handler({
       body: req.body,
       params: req.params,
@@ -151,16 +142,7 @@ export function makeRouter<
     Logger,
     TypeProvider
   >,
-): Router<
-  RawServer,
-  RawRequest,
-  RawReply,
-  RouteGeneric,
-  ContextConfig,
-  SchemaCompiler,
-  Logger,
-  TypeProvider
-> {
+): any {
   const app = inputRouter.withTypeProvider<ZodTypeProvider>();
 
   function registerEndpoint(endpoint: EndpointType): void {
@@ -173,7 +155,7 @@ export function makeRouter<
 
   return {
     app,
-    endpoint(ops) {
+    endpoint(ops: any) {
       registerEndpoint(ops);
     },
     delete: () => null,
